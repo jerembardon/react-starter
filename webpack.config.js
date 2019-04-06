@@ -14,7 +14,28 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
-            }
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg|)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: path.join(__dirname, 'assets\fonts')
+                    }
+                }]
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: './assets/img',
+                    }
+                  },
+                ],
+            },
         ]
     },
     resolve: {
