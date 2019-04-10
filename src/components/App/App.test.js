@@ -1,8 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import App from "./App"
-import pool from "./../../assets/img/pool.jpg";
+import App from "./App";
 
 describe('App rendering test', () => {
     it('Should render app', () => {
