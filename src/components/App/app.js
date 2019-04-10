@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import pool from './../../assets/img/pool.jpg';
-import './../../assets/style/app.scss'
+
 class App extends Component {
     render() {
         return(
