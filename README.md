@@ -9,6 +9,8 @@ This project use webpack & babel 7 for working a simple react app, hot reload an
 Material includes:
 
 *  React 16
+*  Jest
+*  Scss/Sass Support
 
 Installation
 ------------------

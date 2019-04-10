@@ -3,16 +3,16 @@ module.exports = {
     clearMocks: true,
   
     // An array of glob patterns indicating a set of files for which coverage information should be collected
-    collectCoverageFrom: ['src/**/*.{js,jsx,mjs}',  "!src/index.js",],
+    collectCoverageFrom: ['<rootDir>/src/**/*.{js,jsx,mjs}',  "!src/index.js",],
   
     // The directory where Jest should output its coverage files
-    coverageDirectory: 'coverage',
+    coverageDirectory: '<rootDir>/config/jest/coverage',
   
     // An array of file extensions your modules use
     moduleFileExtensions: ['js', 'json', 'jsx'],
   
     // The paths to modules that run some code to configure or set up the testing environment before each test
-    setupFiles: ['<rootDir>/enzyme.config.js'],
+    setupFiles: ['<rootDir>/config/enzyme/enzyme.config.js'],
   
     // The test environment that will be used for testing
     testEnvironment: 'jsdom',
@@ -31,4 +31,9 @@ module.exports = {
     
     // Indicates whether each individual test should be reported during the run
     verbose: false,
+
+    moduleNameMapper: {
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": '<rootDir>/config/jest/fileMock.js',
+        "\\.(css|less|sass|scss)$": "identity-obj-proxy"
+    },
 };
